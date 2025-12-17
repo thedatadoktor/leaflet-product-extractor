@@ -1,0 +1,30 @@
+# FastAPI and Server
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# Image Processing and OCR
+easyocr==1.7.1
+opencv-python==4.8.1.78
+Pillow==10.1.0
+numpy==1.24.3
+
+# Data Validation and Serialization
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Async and Utilities
+aiofiles==23.2.1
+python-dotenv==1.0.0
+
+# Date and Time
+python-dateutil==2.8.2
+
+# Logging
+loguru==0.7.2
+
+# CORS
+python-jose[cryptography]==3.3.0
+
+# Type hints
+typing-extensions==4.8.0
