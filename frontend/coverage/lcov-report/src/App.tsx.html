@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">70% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>7/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>1/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>1/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">70% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>7/10</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -151,23 +151,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -229,23 +229,23 @@ import ProductDetails from './components/ProductDetails';
 import { ExtractionResponse, Product } from './types/product';
 import './App.css';
 &nbsp;
-const App: React.FC = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-  const [extractionData, setExtractionData] = <span class="cstat-no" title="statement not covered" >useState&lt;ExtractionResponse | null&gt;(null);</span>
-  const [selectedProduct, setSelectedProduct] = <span class="cstat-no" title="statement not covered" >useState&lt;Product | null&gt;(null);</span>
+const App: React.FC = () =&gt; {
+  const [extractionData, setExtractionData] = useState&lt;ExtractionResponse | null&gt;(null);
+  const [selectedProduct, setSelectedProduct] = useState&lt;Product | null&gt;(null);
 &nbsp;
-  const handleExtractionComplete = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(d</span>ata: ExtractionResponse) =&gt; {</span>
+  const handleExtractionComplete = <span class="fstat-no" title="function not covered" >(d</span>ata: ExtractionResponse) =&gt; {
 <span class="cstat-no" title="statement not covered" >    setExtractionData(data);</span>
   };
 &nbsp;
-  const handleProductClick = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(p</span>roduct: Product) =&gt; {</span>
+  const handleProductClick = <span class="fstat-no" title="function not covered" >(p</span>roduct: Product) =&gt; {
 <span class="cstat-no" title="statement not covered" >    setSelectedProduct(product);</span>
   };
 &nbsp;
-  const handleCloseModal = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+  const handleCloseModal = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
 <span class="cstat-no" title="statement not covered" >    setSelectedProduct(null);</span>
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;div className="app"&gt;
       &lt;header className="app-header"&gt;
         &lt;h1&gt;🛒 Leaflet Product Extractor&lt;/h1&gt;
@@ -256,7 +256,7 @@ const App: React.FC = <span class="cstat-no" title="statement not covered" ><spa
         &lt;UploadForm onExtractionComplete={handleExtractionComplete} /&gt;
 &nbsp;
         {extractionData &amp;&amp; (
-          &lt;div className="extraction-results"&gt;
+<span class="branch-1 cbranch-no" title="branch not covered" >          &lt;div className="extraction-results"&gt;</span>
             &lt;div className="results-header"&gt;
               &lt;h3&gt;Extraction Results&lt;/h3&gt;
               &lt;div className="extraction-stats"&gt;
@@ -304,7 +304,7 @@ export default App;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-12-18T17:36:49.739Z
+                at 2025-12-18T18:27:31.178Z
             </div>
         <script src="../prettify.js"></script>
         <script>

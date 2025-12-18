@@ -95,10 +95,10 @@ class OCRService:
                 # Create bounding box
                 # bbox_coords is [[x1,y1], [x2,y2], [x3,y3], [x4,y4]]
                 bounding_box = BoundingBox(
-                    top_left=tuple(map(int, bbox_coords[0])),
-                    top_right=tuple(map(int, bbox_coords[1])),
-                    bottom_right=tuple(map(int, bbox_coords[2])),
-                    bottom_left=tuple(map(int, bbox_coords[3]))
+                    top_left=(int(bbox_coords[0][0]), int(bbox_coords[0][1])),
+                    top_right=(int(bbox_coords[1][0]), int(bbox_coords[1][1])),
+                    bottom_right=(int(bbox_coords[2][0]), int(bbox_coords[2][1])),
+                    bottom_left=(int(bbox_coords[3][0]), int(bbox_coords[3][1]))
                 )
                 
                 # Create OCR result
