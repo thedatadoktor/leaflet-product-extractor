@@ -6,6 +6,7 @@ from pathlib import Path
 from datetime import datetime
 from typing import List, Optional
 import uuid
+import time
 
 from app.schemas.product import Product
 from app.core.config import settings
@@ -46,8 +47,8 @@ class ExportService:
         # Generate extraction ID
         extraction_id = f"ext-{uuid.uuid4().hex[:12]}"
         
-        # Generate filename with timestamp
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        # Generate filename with timestamp including microseconds for uniqueness
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
         filename = f"products_{timestamp}.json"
         filepath = self.output_dir / filename
         
