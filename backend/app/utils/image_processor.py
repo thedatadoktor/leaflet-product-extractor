@@ -22,8 +22,8 @@ class ImageProcessor:
     
     def __init__(
         self,
-        max_width: int = None,
-        max_height: int = None
+        max_width: Optional[int] = None,
+        max_height: Optional[int] = None
     ):
         """
         Initialize ImageProcessor.
